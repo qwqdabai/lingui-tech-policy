@@ -1331,11 +1331,14 @@ const tocToggle = document.getElementById('tocToggle');
 document.getElementById('tocHeader').addEventListener('click',()=>{
   tocEl.classList.toggle('expanded');
   tocToggle.textContent = tocEl.classList.contains('expanded') ? '点击收起' : '点击展开';
+  // 页面载入默认收起目录
+tocEl.classList.remove('expanded');
+tocToggle.textContent = '点击展开';
 });
 
 /* 生成底部二维码（固定指向 GitHub 正式地址） */
 new QRCode(document.getElementById('qrCanvas'),{
-  text: 'https://qwqdabai.github.io/lgkjj_web/',
+  text: 'https://qwqdabai.github.io/lingui-tech-policy/',
   width: 170,
   height: 170,
   colorDark: '#1a365d',
