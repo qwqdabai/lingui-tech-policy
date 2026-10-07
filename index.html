@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- saved from url=(0037)https://litter.catbox.moe/3b725q.html -->
+<!-- saved from url=(0037)https://litter.catbox.moe/gfd35t.html -->
 <html lang="zh-CN"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -222,53 +222,6 @@
     font-size:13px;color:var(--text-3);
   }
 
-  /* ===== 微信环境引导遮罩 ===== */
-  .wx-guide{
-    display:none;position:fixed;inset:0;z-index:9999;
-    background:rgba(0,0,0,.82);
-    justify-content:center;align-items:center;padding:24px;
-  }
-  .wx-guide.show{display:flex;}
-  .wx-guide-inner{
-    background:#fff;border-radius:18px;padding:32px 26px 26px;
-    max-width:340px;width:100%;text-align:center;position:relative;
-    box-shadow:0 12px 40px rgba(0,0,0,.3);
-  }
-  .wx-arrow{
-    position:absolute;top:-6px;right:18px;
-    color:#07c160;font-size:42px;font-weight:bold;
-    animation:wxArrowBounce 1.2s ease-in-out infinite;
-  }
-  @keyframes wxArrowBounce{
-    0%,100%{transform:translateY(0)}
-    50%{transform:translateY(-8px)}
-  }
-  .wx-icon{font-size:48px;margin-bottom:12px}
-  .wx-guide-inner h3{
-    font-size:20px;color:#1a202c;margin-bottom:10px;font-weight:700;
-  }
-  .wx-guide-inner p{
-    font-size:14px;color:#4a5568;line-height:1.7;margin-bottom:20px;
-  }
-  .wx-guide-inner p b{color:#e53e3e}
-  .wx-steps{
-    display:flex;justify-content:center;gap:12px;margin-bottom:22px;flex-wrap:wrap;
-  }
-  .wx-step{
-    background:#f7fafc;border:1px solid #e2e8f0;border-radius:10px;
-    padding:10px 14px;font-size:13px;color:#2d3748;display:flex;align-items:center;gap:8px;
-  }
-  .wx-step span{
-    background:#07c160;color:#fff;width:22px;height:22px;border-radius:50%;
-    display:inline-flex;align-items:center;justify-content:center;font-size:12px;font-weight:bold;
-  }
-  .wx-close{
-    background:#07c160;color:#fff;border:none;border-radius:10px;
-    padding:12px 24px;font-size:15px;font-weight:600;cursor:pointer;width:100%;
-    transition:background .2s;
-  }
-  .wx-close:hover{background:#06ad56}
-
   /* ===== Footer / QR Section ===== */
   .footer-qr{
     background:linear-gradient(135deg,#f8fafc 0%,#eef2f7 100%);
@@ -308,25 +261,10 @@
 </head>
 <body>
 
-<!-- 微信环境引导遮罩 -->
-<div class="wx-guide" id="wxGuide">
-  <div class="wx-guide-inner">
-    <div class="wx-arrow">↗</div>
-    <div class="wx-icon">📱</div>
-    <h3>请在浏览器中打开</h3>
-    <p>当前在微信中浏览，部分功能可能受限。<br>请点击右上角 <b>···</b>，选择「<b>在浏览器打开</b>」</p>
-    <div class="wx-steps">
-      <div class="wx-step"><span>1</span> 点右上角菜单</div>
-      <div class="wx-step"><span>2</span> 选"在浏览器打开"</div>
-    </div>
-    <button class="wx-close" id="wxClose">我知道了，继续浏览</button>
-  </div>
-</div>
-
 <header class="site-header">
   <div class="container header-inner">
     <h1>临桂区科技政策查询平台</h1>
-    <p class="subtitle">一键查询各级科技创新政策</p>
+    <p class="subtitle">汇集自治区级 · 桂林市 · 临桂区三级科技创新政策，一键查阅原文</p>
   </div>
 </header>
 
@@ -1330,22 +1268,6 @@ document.getElementById('tocHeader').addEventListener('click',()=>{
   tocEl.classList.toggle('expanded');
   tocToggle.textContent = tocEl.classList.contains('expanded') ? '点击收起' : '点击展开';
 });
-
-/* 微信环境检测与引导 */
-(function(){
-  var ua = navigator.userAgent.toLowerCase();
-  var isWeChat = /micromessenger/.test(ua);
-  if(isWeChat){
-    var guide = document.getElementById('wxGuide');
-    var closeBtn = document.getElementById('wxClose');
-    if(guide){
-      guide.classList.add('show');
-      closeBtn.addEventListener('click',function(){
-        guide.classList.remove('show');
-      });
-    }
-  }
-})();
 </script>
 
 
