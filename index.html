@@ -1,10 +1,8 @@
 <!DOCTYPE html>
-<!-- saved from url=(0085)file:///C:/Users/lenovo/Desktop/kjj%E6%94%BF%E7%AD%96%E6%9F%A5%E8%AF%A2/v1/index.html -->
 <html lang="zh-CN"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>临桂区科技政策查询</title>
-<script src="file:///C:/Users/lenovo/Desktop/kjj%E6%94%BF%E7%AD%96%E6%9F%A5%E8%AF%A2/v1/%E4%B8%B4%E6%A1%82%E5%8C%BA%E7%A7%91%E6%8A%80%E6%94%BF%E7%AD%96%E6%9F%A5%E8%AF%A2_files/qrcode.min.js.%E4%B8%8B%E8%BD%BD"></script>
 <style>
   :root{
     --primary:#1a365d;
@@ -281,10 +279,13 @@
     border-radius:14px;padding:28px 24px 22px;text-align:center;
     box-shadow:0 4px 16px rgba(26,54,93,.06);
   }
-  .qr-card .qr-canvas{
+  /* .qr-card .qr-canvas{
     display:flex;justify-content:center;margin-bottom:16px;
   }
-  .qr-card .qr-canvas canvas,.qr-card .qr-canvas img{display:block}
+  .qr-card .qr-canvas canvas,.qr-card .qr-canvas img{display:block} */
+  .qr-card .qr-img{
+    display:block;margin:0 auto 16px;width:170px;height:170px;
+  }
   .qr-card h4{
     font-size:17px;font-weight:700;color:var(--primary);margin-bottom:6px;letter-spacing:.5px;
   }
@@ -538,7 +539,8 @@
 <!-- 底部二维码区 -->
 <section class="footer-qr">
   <div class="qr-card">
-    <div class="qr-canvas" id="qrCanvas" ></div>
+    <!-- <div class="qr-canvas" id="qrCanvas" ></div> -->
+        < img class="qr-img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAcIAAAHCCAIAAADzel4SAAAKK0lEQVR4nO3dwY0jyRFAUY0wXsgQeSPj5I0MkR3UdU+Jxf5JRSTnvWuDzWIV+ZGXQPz4fD5/A+Cv+vv0BQC8TUYBEhkFSGQUIJFRgERGARIZBUhkFCCRUYBERgESGQVIZBQgkVGAREYBEhkFSGQUIJFRgERGARIZBUh+lhf/45//+lXXscR///Pvw1/vfd6p9z07X9XZ+Zrvfd6p/1x83/N9UbkbTqMAiYwCJDIKkMgoQCKjAImMAiQyCpDIKEAiowBJmmI6uzf1UeycGHFVf/Ti9NTZ1PzblJ1Xde8pOI0CJDIKkMgoQCKjAImMAiQyCpDIKEAiowCJjAIkF6eYzr5vrmPn5MbOrUf33rdc1dRuont3cud38vt++06jAImMAiQyCpDIKEAiowCJjAIkMgqQyChAIqMAydgU04u+b3PRzhmns6mNSWV6qpjaTMWf5zQKkMgoQCKjAImMAiQyCpDIKEAiowCJjAIkMgqQmGJa4d48yc45lqmNSWf3Zqvufd6p2Tn+yGkUIJFRgERGARIZBUhkFCCRUYBERgESGQVIZBQgGZtienEPzL3pmqk5lqm5nTMzTr/Kzl/ZzqsqnEYBEhkFSGQUIJFRgERGARIZBUhkFCCRUYBERgGSi1NMtsT80c5dPV775714zWdTU3nfx2kUIJFRgERGARIZBUhkFCCRUYBERgESGQVIZBQg+fH5fKav4RlT0yb37PxEZQbm3t6qqfed2vHFn+c0CpDIKEAiowCJjAIkMgqQyChAIqMAiYwCJDIKkFzcxXS2c55k596be6+958X5mZ3zQuU/7/xu7NzyVK7KaRQgkVGAREYBEhkFSGQUIJFRgERGARIZBUhkFCAZ28U0NZkzNac0ZefESLHzE01d1dQvZecU4r33PXMaBUhkFCCRUYBERgESGQVIZBQgkVGAREYBEhkFSNIU085dLjvnHF6c+pjaarVzSq148Tv5fb+ye98Np1GAREYBEhkFSGQUIJFRgERGARIZBUhkFCCRUYDkZ3nx1JzD1PzMzt1EZ1PP6J4Xp1zOdk7H7Zy7O7926gk6jQIkMgqQyChAIqMAiYwCJDIKkMgoQCKjAImMAiRpiuneLpfy2hc3RN2bvih3Y+eM04t38t777tzEdc/OHVBOowCJjAIkMgqQyChAIqMAiYwCJDIKkMgoQCKjAEmaYpoyNanyu8113PPiDNu9p3/vtVN7q8oz2vkrO3MaBUhkFCCRUYBERgESGQVIZBQgkVGAREYBEhkFSNIU0865jmLnPqVi50asFzcI3buqKTsngl78lTmNAiQyCpDIKEAiowCJjAIkMgqQyChAIqMAiYwCJD8+n8/IG0/tzDn7vi0xxdTnnZolm5pTenFuZ+c1Tz1Bp1GAREYBEhkFSGQUIJFRgERGARIZBUhkFCCRUYAk7WI62znVc29OaefMT7Hzmqf2ON2zcwPY1C/lbOdv0GkUIJFRgERGARIZBUhkFCCRUYBERgESGQVIZBQgSbuYpuaUdm6nOfu+DUJnO6+quPeJXvxu7Pzt28UE8CQZBUhkFCCRUYBERgESGQVIZBQgkVGAREYBki+cYtq5Qehs54aZYue0SbHze7VzY9LZzjtZOI0CJDIKkMgoQCKjAImMAiQyCpDIKEAiowCJjAIkF6eYzGbsd+9OTs1lvbj16Oz7fkcvzrCdOY0CJDIKkMgoQCKjAImMAiQyCpDIKEAiowCJjAIkaYrpbGoWZcrO+aidO5GmZn6+b35mambv7Hf7hTqNAiQyCpDIKEAiowCJjAIkMgqQyChAIqMAiYwCJD/Li6dmFXbOC5X/XD7Rvdeer3nnbFXx4tajF+/k1FXd+w06jQIkMgqQyChAIqMAiYwCJDIKkMgoQCKjAImMAiQXdzGd3Zv6KF5836nZmylTd+Ns5zfnbOedLKa+sU6jAImMAiQyCpDIKEAiowCJjAIkMgqQyChAIqMASZpi2jmbUUzNVr24XWrqbrz4n8+mZsm+7/NOfSKnUYBERgESGQVIZBQgkVGAREYBEhkFSGQUIJFRgGRsimnn9qGznfMkZzunTXa+75m78bp7d9JpFCCRUYBERgESGQVIZBQgkVGAREYBEhkFSGQUIPlZXvx9O3PuTRO9OIsyNWm2cyLoxRm2nbvFdk4SFk6jAImMAiQyCpDIKEAiowCJjAIkMgqQyChAIqMASdrFdDY1QVHs3BD14u6pnfdqaufV992N321O6cxpFCCRUYBERgESGQVIZBQgkVGAREYBEhkFSGQUIEm7mKa28UxNX7x4VTunxXYq96rcyZ3Pd2qb1s6JrzOnUYBERgESGQVIZBQgkVGAREYBEhkFSGQUIJFRgCTtYprabHP24lXtnK06+75ndM+LO6DuzfycvfjdcBoFSGQUIJFRgERGARIZBUhkFCCRUYBERgESGQVILk4x7dyaUkxtWyr/+WznpMrOnVf3vDgdd/biji+7mADGyChAIqMAiYwCJDIKkMgoQCKjAImMAiQyCpD8nHrjF3cT7ZyB2fm+O2erds7t7Py8O3ci7ZxvdBoFSGQUIJFRgERGARIZBUhkFCCRUYBERgESGQVIxqaYpuaUymvvTaqcfd/Ux735mRcn3F7cLTb1vlP36sxpFCCRUYBERgESGQVIZBQgkVGAREYBEhkFSGQUIFm6i6l4ccPM2c5dPcXOKbWpXUzlP+/cD1a8+Pt1GgVIZBQgkVGAREYBEhkFSGQUIJFRgERGARIZBUh+fD6f6Wt4xs4JirOdMz9nO+/zixNQ3/d8p7ZpnTmNAiQyCpDIKEAiowCJjAIkMgqQyChAIqMAiYwCJGkX04ubXs7OkwxTW2KmZjN2TubcU6556vPu/E7em4A6m3pfp1GAREYBEhkFSGQUIJFRgERGARIZBUhkFCCRUYAk7WLaOclw9n37Z8r7/m67eooXdzEVLz5fu5gAniSjAImMAiQyCpDIKEAiowCJjAIkMgqQyChAknYxFfcmN75v+mLnlMtOL05tTc377fzW7ZxTOnMaBUhkFCCRUYBERgESGQVIZBQgkVGAREYBEhkFSMammL7PvemL8r737JwnKf955/aws6nJuqnXFvem1JxGARIZBUhkFCCRUYBERgESGQVIZBQgkVGAREYBElNM/ydlRsLOnF/1n1/carVztureU7CLCeC3I6MAiYwCJDIKkMgoQCKjAImMAiQyCpDIKEAyNsW0czbjbOf+mXt3skxP3ZvauvcUip1Pf2r+bedV3eM0CpDIKEAiowCJjAIkMgqQyChAIqMAiYwCJDIKkFycYnpxGuGee3djauZn5/Odmhcq81FTc1k7vxsvzjc6jQIkMgqQyChAIqMAiYwCJDIKkMgoQCKjAImMAiQ/Pp/P9DUAPMxpFCCRUYBERgESGQVIZBQgkVGAREYBEhkFSGQUIJFRgERGARIZBUhkFCCRUYBERgESGQVIZBQgkVGAREYBkv8BQLPD+9pWW0IAAAAASUVORK5CYII=" alt="临桂区科技政策查询平台二维码">
     <h4>临桂区科技政策查询平台</h4>
     <div class="qr-sub">手机扫码 · 随时查阅政策原文</div>
   </div>
@@ -1336,15 +1338,15 @@ document.getElementById('tocHeader').addEventListener('click',()=>{
 tocEl.classList.remove('expanded');
 tocToggle.textContent = '点击展开';
 
-/* 生成底部二维码（固定指向 GitHub 正式地址） */
-new QRCode(document.getElementById('qrCanvas'),{
-  text: 'https://qwqdabai.github.io/lingui-tech-policy/',
-  width: 170,
-  height: 170,
-  colorDark: '#1a365d',
-  colorLight: '#ffffff',
-  correctLevel: QRCode.CorrectLevel.H
-});
+// /* 生成底部二维码（固定指向 GitHub 正式地址） */
+// new QRCode(document.getElementById('qrCanvas'),{
+//   text: 'https://qwqdabai.github.io/lingui-tech-policy/',
+//   width: 170,
+//   height: 170,
+//   colorDark: '#1a365d',
+//   colorLight: '#ffffff',
+//   correctLevel: QRCode.CorrectLevel.H
+// });
 
 /* 微信环境检测与引导 */
 (function(){
